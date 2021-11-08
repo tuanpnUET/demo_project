@@ -1,5 +1,15 @@
 <p id="notice"><%= notice %></p>
-
+<div class="jumbotron">
+  <h1 class="display-4"> Welcom
+    <%= @user.name %>!
+  </h1>
+  <p class="lead">
+    <%= @user.email %> | <%= @user.game_id %>
+  </p>
+  <br />
+  <%= link_to 'Edit', edit_user_path(@user), class: 'btn btn-secondary', style: 'color: white;' %> 
+  <%= link_to 'Back', users_path, class: 'btn btn-dark', style: 'color: white;' %> 
+</div>
 <p>
   <strong>Nick name:</strong>
   <%= @user.nick_name %>
@@ -40,5 +50,4 @@
   <%= @user.game_id %>
 </p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+
